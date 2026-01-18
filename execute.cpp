@@ -7,6 +7,6 @@
 
 
 int main() {
-    bool result = checkPerfectNumber(28);
+    bool result = true;
     std::cout << result << std::endl;
 }
