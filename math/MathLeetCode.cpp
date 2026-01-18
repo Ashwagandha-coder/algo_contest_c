@@ -71,29 +71,6 @@ std::vector<int> selfDividingNumbers(int left, int right) {
     return result;
 }
 
-/**
- * 2283. Check if Number Has Equal Digit Count and Digit Value
- */
-
-bool digitCount(std::string num) {
-    int freq[10];
-
-    for (auto c: num)
-    {
-        freq[c - '0']++;
-    }
-
-    for (int i = 0; i < num.length(); i++)
-    {
-        auto number = num[i] - '0';
-        if (freq[i] != number)
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
 
 
 

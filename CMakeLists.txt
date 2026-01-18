@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(algo_contest execute.cpp
         math/MathLeetCode.cpp
-        math/PerfectNumbersH.h)
+        math/PerfectNumbersH.h
+        hashMap/HashMapLeetCode.cpp)
