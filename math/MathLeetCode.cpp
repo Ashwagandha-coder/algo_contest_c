@@ -36,7 +36,6 @@ bool checkPerfectNumber(int num) {
 }
 
 
-
 /**
  * 728. Self Dividing Numbers
  */
@@ -46,8 +45,7 @@ bool isSelfDividingNumber(int number) {
 
     while (num != 0) {
         int possible = num % 10;
-        if (possible == 0 || number % possible != 0)
-        {
+        if (possible == 0 || number % possible != 0) {
             return false;
         }
         num /= 10;
@@ -60,10 +58,8 @@ bool isSelfDividingNumber(int number) {
 std::vector<int> selfDividingNumbers(int left, int right) {
     std::vector<int> result;
 
-    for (int num = left; num <= right; num++)
-    {
-        if (isSelfDividingNumber(num))
-        {
+    for (int num = left; num <= right; num++) {
+        if (isSelfDividingNumber(num)) {
             result.push_back(num);
         }
     }
@@ -71,7 +67,20 @@ std::vector<int> selfDividingNumbers(int left, int right) {
     return result;
 }
 
+/**
+ * 371. Sum of Two Integers
+ */
 
 
+int getSum(int a, int b) {
+    int x = a;
+    int y = b;
 
+    while (y != 0) {
+        int carry = x & y;
+        x = x ^ y;
+        y = carry << 1;
+    }
 
+    return x;
+}
