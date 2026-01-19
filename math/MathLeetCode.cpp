@@ -84,3 +84,20 @@ int getSum(int a, int b) {
 
     return x;
 }
+
+/**
+ * 89. Gray Code
+ */
+
+std::pmr::vector<int> grayCode(int n) {
+    std::pmr::vector<int> res;
+    int size = 1 << n;
+    res.reserve(size);
+
+    for (int num = 0; num < size; num++)
+    {
+        res.push_back(num ^ (num >> 1));
+    }
+
+    return res;
+}
