@@ -89,8 +89,8 @@ int getSum(int a, int b) {
  * 89. Gray Code
  */
 
-std::pmr::vector<int> grayCode(int n) {
-    std::pmr::vector<int> res;
+std::vector<int> grayCode(int n) {
+    std::vector<int> res;
     int size = 1 << n;
     res.reserve(size);
 
@@ -100,4 +100,32 @@ std::pmr::vector<int> grayCode(int n) {
     }
 
     return res;
+}
+
+/**
+ * 717. 1-bit and 2-bit Characters
+ */
+
+bool isOneBitCharacter(std::vector<int>& bits) {
+    int i = 0;
+    int n = bits.size();
+
+    while (i < n)
+    {
+        if (i == n - 1)
+        {
+            return true;
+        }
+
+        if (bits[i] == 1)
+        {
+            i += 2;
+        }
+        else
+        {
+            i++;
+        }
+    }
+
+    return false;
 }
