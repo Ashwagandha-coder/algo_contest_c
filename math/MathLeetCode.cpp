@@ -129,3 +129,35 @@ bool isOneBitCharacter(std::vector<int>& bits) {
 
     return false;
 }
+
+
+/**
+ * 908. Smallest Range I
+ */
+
+
+int smallestRangeI(std::vector<int>& nums, int k) {
+    int min = 10000;
+    int max = 0;
+
+    for (auto num: nums) {
+        if (num > max)
+        {
+            max = num;
+        }
+        if (num < min)
+        {
+            min = num;
+        }
+    }
+
+    min += k;
+    max -= k;
+
+    if (max < min)
+    {
+        max = min;
+    }
+
+    return max - min;
+}
