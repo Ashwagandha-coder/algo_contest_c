@@ -7,6 +7,6 @@
 
 
 int main() {
-    bool result = true;
+    auto result = 100 / 7;
     std::cout << result << std::endl;
 }
